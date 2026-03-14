@@ -6,14 +6,75 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2AF76F9E2F648A0000DBFB6E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AF76F9D2F648A0000DBFB6E /* WidgetKit.framework */; };
+		2AF76FA02F648A0000DBFB6E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AF76F9F2F648A0000DBFB6E /* SwiftUI.framework */; };
+		2AF76FB12F648A0200DBFB6E /* PokemonWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2AF76F9B2F648A0000DBFB6E /* PokemonWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2AF76FAF2F648A0200DBFB6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2AF76F812F6489B900DBFB6E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2AF76F9A2F648A0000DBFB6E;
+			remoteInfo = PokemonWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2AF76FB62F648A0200DBFB6E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2AF76FB12F648A0200DBFB6E /* PokemonWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2AF76F892F6489B900DBFB6E /* PokemonIsland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonIsland.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AF76F9B2F648A0000DBFB6E /* PokemonWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PokemonWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AF76F9D2F648A0000DBFB6E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		2AF76F9F2F648A0000DBFB6E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		2AF76FB22F648A0200DBFB6E /* Exceptions for "PokemonWidget" folder in "PokemonWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 2AF76F9A2F648A0000DBFB6E /* PokemonWidgetExtension */;
+		};
+		2AF7700C2F649A7200DBFB6E /* Exceptions for "PokemonIsland" folder in "PokemonIsland" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 2AF76F882F6489B900DBFB6E /* PokemonIsland */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		2AF76F8B2F6489B900DBFB6E /* PokemonIsland */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				2AF7700C2F649A7200DBFB6E /* Exceptions for "PokemonIsland" folder in "PokemonIsland" target */,
+			);
 			path = PokemonIsland;
+			sourceTree = "<group>";
+		};
+		2AF76FA12F648A0000DBFB6E /* PokemonWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				2AF76FB22F648A0200DBFB6E /* Exceptions for "PokemonWidget" folder in "PokemonWidgetExtension" target */,
+			);
+			path = PokemonWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,6 +87,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2AF76F982F648A0000DBFB6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AF76FA02F648A0000DBFB6E /* SwiftUI.framework in Frameworks */,
+				2AF76F9E2F648A0000DBFB6E /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				2AF76F8B2F6489B900DBFB6E /* PokemonIsland */,
+				2AF76FA12F648A0000DBFB6E /* PokemonWidget */,
+				2AF76F9C2F648A0000DBFB6E /* Frameworks */,
 				2AF76F8A2F6489B900DBFB6E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +113,18 @@
 			isa = PBXGroup;
 			children = (
 				2AF76F892F6489B900DBFB6E /* PokemonIsland.app */,
+				2AF76F9B2F648A0000DBFB6E /* PokemonWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2AF76F9C2F648A0000DBFB6E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2AF76F9D2F648A0000DBFB6E /* WidgetKit.framework */,
+				2AF76F9F2F648A0000DBFB6E /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +137,12 @@
 				2AF76F852F6489B900DBFB6E /* Sources */,
 				2AF76F862F6489B900DBFB6E /* Frameworks */,
 				2AF76F872F6489B900DBFB6E /* Resources */,
+				2AF76FB62F648A0200DBFB6E /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2AF76FB02F648A0200DBFB6E /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				2AF76F8B2F6489B900DBFB6E /* PokemonIsland */,
@@ -69,6 +153,28 @@
 			productName = PokemonIsland;
 			productReference = 2AF76F892F6489B900DBFB6E /* PokemonIsland.app */;
 			productType = "com.apple.product-type.application";
+		};
+		2AF76F9A2F648A0000DBFB6E /* PokemonWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2AF76FB32F648A0200DBFB6E /* Build configuration list for PBXNativeTarget "PokemonWidgetExtension" */;
+			buildPhases = (
+				2AF76F972F648A0000DBFB6E /* Sources */,
+				2AF76F982F648A0000DBFB6E /* Frameworks */,
+				2AF76F992F648A0000DBFB6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				2AF76FA12F648A0000DBFB6E /* PokemonWidget */,
+			);
+			name = PokemonWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = PokemonWidgetExtension;
+			productReference = 2AF76F9B2F648A0000DBFB6E /* PokemonWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +187,9 @@
 				LastUpgradeCheck = 2630;
 				TargetAttributes = {
 					2AF76F882F6489B900DBFB6E = {
+						CreatedOnToolsVersion = 26.3;
+					};
+					2AF76F9A2F648A0000DBFB6E = {
 						CreatedOnToolsVersion = 26.3;
 					};
 				};
@@ -100,12 +209,20 @@
 			projectRoot = "";
 			targets = (
 				2AF76F882F6489B900DBFB6E /* PokemonIsland */,
+				2AF76F9A2F648A0000DBFB6E /* PokemonWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2AF76F872F6489B900DBFB6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AF76F992F648A0000DBFB6E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +239,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2AF76F972F648A0000DBFB6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2AF76FB02F648A0200DBFB6E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2AF76F9A2F648A0000DBFB6E /* PokemonWidgetExtension */;
+			targetProxy = 2AF76FAF2F648A0200DBFB6E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		2AF76F922F6489BB00DBFB6E /* Debug */ = {
@@ -256,6 +388,9 @@
 				DEVELOPMENT_TEAM = 2CR3H8AB2K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PokemonIsland/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "PokemonIsland uses your microphone to drive real-time Live Activity visualizer effects.";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -288,6 +423,9 @@
 				DEVELOPMENT_TEAM = 2CR3H8AB2K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PokemonIsland/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "PokemonIsland uses your microphone to drive real-time Live Activity visualizer effects.";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -303,6 +441,66 @@
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2AF76FB42F648A0200DBFB6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2CR3H8AB2K;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PokemonWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PokemonWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tucker.PokemonIsland.PokemonWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2AF76FB52F648A0200DBFB6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2CR3H8AB2K;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PokemonWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PokemonWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tucker.PokemonIsland.PokemonWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -327,6 +525,15 @@
 			buildConfigurations = (
 				2AF76F952F6489BB00DBFB6E /* Debug */,
 				2AF76F962F6489BB00DBFB6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2AF76FB32F648A0200DBFB6E /* Build configuration list for PBXNativeTarget "PokemonWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AF76FB42F648A0200DBFB6E /* Debug */,
+				2AF76FB52F648A0200DBFB6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
